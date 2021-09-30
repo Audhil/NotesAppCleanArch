@@ -116,6 +116,7 @@ fun AddEditNoteScreen(
             }
             Spacer(modifier = Modifier.height(16.dp))
             TransparentHintTextField(
+                testTag = "title",
                 text = titleState.text,
                 hint = titleState.hint,
                 onValueChange = {
@@ -130,6 +131,7 @@ fun AddEditNoteScreen(
             )
             Spacer(modifier = Modifier.height(16.dp))
             TransparentHintTextField(
+                testTag = "content",
                 text = contentState.text,
                 hint = contentState.hint,
                 onValueChange = {

@@ -17,6 +17,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -32,7 +33,7 @@ fun NoteItem(
     onDeleteClick: () -> Unit
 ) =
     Box(
-        modifier = modifier
+        modifier = modifier.testTag("NOTE_ITEM")
     ) {
         Canvas(modifier = Modifier.matchParentSize()) {
             val clipPath = Path().apply {
